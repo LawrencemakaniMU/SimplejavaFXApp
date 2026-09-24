@@ -1,0 +1,38 @@
+package com.example.hellofx;
+
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class HellojavaFX extends Application {
+    @Override
+    public void start(Stage stage){
+        Label message = new Label("Welcome,Lawrence Makani.");
+        Button button = new Button("Start");
+        Button button1 = new Button("Reset");
+
+        button.setOnAction(event ->
+                message.setText("Great! You clicked the button.")
+        );
+        button1.setOnAction(event ->
+                message.setText("Welcome, Lawrence Makani.")
+        );
+
+        VBox layout = new VBox(20);
+        layout.setAlignment(Pos.CENTER);
+        layout.getChildren().addAll(message, button);
+
+        Scene scene = new Scene (layout, 500, 300);
+        stage.setTitle("My First javaFX Application, SN:202506223");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
