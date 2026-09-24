@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -21,10 +22,11 @@ public class HellojavaFX extends Application {
         button1.setOnAction(event ->
                 message.setText("Welcome, Lawrence Makani.")
         );
-
+        HBox buttons = new HBox(10, button, button1);
+        buttons.setAlignment(Pos.CENTER);
         VBox layout = new VBox(20);
         layout.setAlignment(Pos.CENTER);
-        layout.getChildren().addAll(message, button);
+        layout.getChildren().addAll(message, buttons);
 
         Scene scene = new Scene (layout, 500, 300);
         stage.setTitle("My First javaFX Application, SN:202506223");
