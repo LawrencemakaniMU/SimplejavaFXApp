@@ -1,0 +1,15 @@
+.root { -fx-font-size: 14px; }
+
+.title { -fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1f3a5f; }
+
+/* Status message colours */
+.status-ok { -fx-text-fill: #1e7b34; }
+.status-error { -fx-text-fill: #c0392b; }
+
+.count { -fx-text-fill: #555555; }
+
+.text-field:focused, .combo-box:focused, .button:focused {
+    -fx-border-color: #1f6feb;
+    -fx-border-width: 2;
+    -fx-border-radius: 3;
+}
